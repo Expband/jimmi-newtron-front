@@ -7,7 +7,7 @@ $('#authorize').on('click', (e) => {
         allowedConnections: ['sms'],
         passwordlessMethod: 'code',
         auth: {
-            redirectUrl: 'https://jimmi-newtron-front-1129fbebcd87.herokuapp.com/waiting',
+            redirectUrl: 'https://jimmi-newtron-front-1129fbebcd87.herokuapp.com/',
             audience: "https://electro-managment.com",
         }
     }
