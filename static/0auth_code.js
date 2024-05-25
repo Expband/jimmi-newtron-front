@@ -3,11 +3,11 @@ const url = new URL(currentUrl);
 const code = url.searchParams.get("code");
 
 if (!code) {
-    window.location.href = "http://127.0.0.1:9090/";
+    window.location.href = "https://jimmi-newtron-front-1129fbebcd87.herokuapp.com/";
 }
 
 $(document).ready(function () {
-    fetch('http://127.0.0.1:9090/authorize', {
+    fetch('https://jimmi-newtron-8bfd33f87c1a.herokuapp.com/authorize', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
