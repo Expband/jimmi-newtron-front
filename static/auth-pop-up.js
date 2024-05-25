@@ -12,7 +12,7 @@ $('#authorize').on('click', (e) => {
         }
     }
     var lockPasswordless = new Auth0LockPasswordless(
-        '80mrs1T5Mk4YwHs4IZOkRFNJrVxa5nNE',
+        'hyBOKO8Ph7Uy8tT6lstatChFjwOkdfA5',
         'dev-6zx4qo7gopqnmotm.us.auth0.com',
         passwordlessOptions
     );
