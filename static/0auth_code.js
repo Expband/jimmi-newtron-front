@@ -7,7 +7,7 @@ if (!code) {
 }
 
 $(document).ready(function () {
-    fetch('https://jimmi-newtron-8bfd33f87c1a.herokuapp.com/authorize', {
+    fetch('https://jimmi-newtron-8bfd33f87c1a.herokuapp.com/auth/authorize_code', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
