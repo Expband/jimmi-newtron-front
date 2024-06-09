@@ -2,14 +2,14 @@ var axios = require("axios").default;
 
 var options = {
     method: 'POST',
-    url: 'https://dev-h5mzz0nq5zepl1tt.us.auth0.com/oauth/token',
+    url: 'https://dev-u5le8cq1mkql8c2t.us.auth0.com/oauth/token',
     headers: {'content-type': 'application/x-www-form-urlencoded'},
     data: new URLSearchParams({
         grant_type: 'authorization_code',
-        client_id: 'JkpFqGpDOoiwVJv0iEgTcBjKZPIClRR8',
-        client_secret: 'YnbVSapgzJHPUlFCeHiFKYeeJ_-UDQOLyk7-dJ5loNatlHF3cF9JSAP4SN5LIUkL',
-        code: '2MN0-9kt1IaF9tbcbrAfaz4Cm7mu0Wj3JvX0zleIUiiHS',
-        redirect_uri: 'https://www.yenebezpeka.pp.ua/loading',
+        client_id: 'ItNrfB0zq2owCl8RUoUAc2PvTmpmLAnR',
+        client_secret: 'h-uWEwtf9LAe527iz5nLowW-a4mdXbG2SINLLk6cofxyv95UBw8Jyb_t9hoEr6De',
+        code: 'KlwwJVvJEuglGNoJ2FdFGqRI6RAY2g1FRJD2lJtrfXNc-',
+        redirect_uri: 'https://jimmi-newtron-front-1129fbebcd87.herokuapp.com/waiting',
     })
 };
 
