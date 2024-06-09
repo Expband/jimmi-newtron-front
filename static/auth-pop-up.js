@@ -8,12 +8,12 @@ $('#authorize').on('click', (e) => {
         passwordlessMethod: 'code',
         auth: {
             redirectUrl: 'https://jimmi-newtron-front-1129fbebcd87.herokuapp.com/waiting',
-            audience: "https://electro-managment.com",
+            audience: "https://auth-dyploma-api",
         }
     }
     var lockPasswordless = new Auth0LockPasswordless(
-        'hyBOKO8Ph7Uy8tT6lstatChFjwOkdfA5',
-        'dev-6zx4qo7gopqnmotm.us.auth0.com',
+        'xKh4doMSl8ByXlLW5pjqZsLLr8fQMmJw', //client_id
+        'dev-u5le8cq1mkql8c2t.us.auth0.com',
         passwordlessOptions
     );
 
