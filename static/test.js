@@ -8,7 +8,7 @@ var options = {
         grant_type: 'authorization_code',
         client_id: 'JkpFqGpDOoiwVJv0iEgTcBjKZPIClRR8',
         client_secret: 'YnbVSapgzJHPUlFCeHiFKYeeJ_-UDQOLyk7-dJ5loNatlHF3cF9JSAP4SN5LIUkL',
-        code: '_L-jdVJAkRSo-qoe4Wmai00pzIJpzsM0PwfQbFMKvfbxg',
+        code: '2MN0-9kt1IaF9tbcbrAfaz4Cm7mu0Wj3JvX0zleIUiiHS',
         redirect_uri: 'https://www.yenebezpeka.pp.ua/loading',
     })
 };
