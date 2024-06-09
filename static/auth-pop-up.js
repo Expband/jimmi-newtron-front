@@ -7,8 +7,8 @@ $('#authorize').on('click', (e) => {
         allowedConnections: ['sms'],
         passwordlessMethod: 'code',
         auth: {
-            redirectUrl: 'https://jimmi-newtron-front-1129fbebcd87.herokuapp.com/waiting',
-            audience: "https://auth-dyploma-api",
+            redirectUrl: 'https://www.yenebezpeka.pp.ua/loading',
+            audience: "https://yen-api",
         }
     }
     var lockPasswordless = new Auth0LockPasswordless(
