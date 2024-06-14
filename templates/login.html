@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JN</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Saira Stencil One' rel='stylesheet'>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+            defer>
+    </script>
+    <script src="https://cdn.auth0.com/js/lock/12.4.0/lock.min.js" defer></script>
+    <script src="../static/js/auth-pop-up.js" defer></script>
+</head>
+<body>
+<div class="container-fluid main-container">
+    <div class="row">
+        <div class="col">
+            <div class="svg-clouds">
+                <svg width="176" height="103" viewBox="0 0 176 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.3342 89.1407C28.1046 89.1463 27.8742 89.1491 27.6431 89.1491C12.3763 89.1491 0 76.7729 0 61.506C0 47.128 10.977 35.3139 25.0077 33.9869C26.6558 14.9637 43.9141 0 64.9614 0C87.0984 0 105.044 16.5532 105.044 36.9727C105.044 40.2064 104.594 43.3431 103.748 46.3325C104.177 46.3124 104.609 46.3023 105.044 46.3023C118.402 46.3023 129.232 55.8939 129.232 67.7257C129.232 79.5575 118.402 89.1491 105.044 89.1491C105.03 89.1491 105.016 89.1491 105.003 89.1491H28.3342V89.1407Z" fill="#5D919E"/>
+                    <g filter="url(#filter0_b_0_4)">
+                        <mask id="path-2-inside-1_0_4" fill="white">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M74.6365 102.271C74.4068 102.277 74.1765 102.28 73.9454 102.28C58.6785 102.28 46.3023 89.9034 46.3023 74.6365C46.3023 60.2586 57.2793 48.4444 71.3099 47.1174C72.958 28.0942 90.2164 13.1305 111.264 13.1305C133.401 13.1305 151.346 29.6837 151.346 50.1032C151.346 53.3369 150.896 56.4736 150.051 59.463C150.48 59.4429 150.912 59.4328 151.346 59.4328C164.705 59.4328 175.534 69.0244 175.534 80.8562C175.534 92.6881 164.705 102.28 151.346 102.28H74.6365V102.271Z"/>
+                        </mask>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M74.6365 102.271C74.4068 102.277 74.1765 102.28 73.9454 102.28C58.6785 102.28 46.3023 89.9034 46.3023 74.6365C46.3023 60.2586 57.2793 48.4444 71.3099 47.1174C72.958 28.0942 90.2164 13.1305 111.264 13.1305C133.401 13.1305 151.346 29.6837 151.346 50.1032C151.346 53.3369 150.896 56.4736 150.051 59.463C150.48 59.4429 150.912 59.4328 151.346 59.4328C164.705 59.4328 175.534 69.0244 175.534 80.8562C175.534 92.6881 164.705 102.28 151.346 102.28H74.6365V102.271Z" fill="#CFEBFF" fill-opacity="0.65"/>
+                        <path d="M74.6365 102.271H76.6365V100.222L74.5874 100.272L74.6365 102.271ZM71.3099 47.1174L71.4982 49.1085L73.1585 48.9515L73.3025 47.29L71.3099 47.1174ZM150.051 59.463L148.126 58.9187L147.371 61.5905L150.144 61.4608L150.051 59.463ZM74.6365 102.28H72.6365V104.28H74.6365V102.28ZM74.5874 100.272C74.3741 100.277 74.1601 100.28 73.9454 100.28V104.28C74.1928 104.28 74.4395 104.277 74.6856 104.271L74.5874 100.272ZM73.9454 100.28C59.7831 100.28 48.3023 88.7989 48.3023 74.6365H44.3023C44.3023 91.008 57.574 104.28 73.9454 104.28V100.28ZM48.3023 74.6365C48.3023 61.3 58.4848 50.3393 71.4982 49.1085L71.1216 45.1263C56.0737 46.5495 44.3023 59.2172 44.3023 74.6365H48.3023ZM73.3025 47.29C74.8504 29.4224 91.1271 15.1305 111.264 15.1305V11.1305C89.3057 11.1305 71.0656 26.7659 69.3174 46.9448L73.3025 47.29ZM111.264 15.1305C132.451 15.1305 149.346 30.9373 149.346 50.1032H153.346C153.346 28.4302 134.35 11.1305 111.264 11.1305V15.1305ZM149.346 50.1032C149.346 53.1502 148.922 56.1039 148.126 58.9187L151.975 60.0073C152.87 56.8433 153.346 53.5235 153.346 50.1032H149.346ZM150.144 61.4608C150.542 61.4422 150.943 61.4328 151.346 61.4328V57.4328C150.88 57.4328 150.417 57.4437 149.957 57.4652L150.144 61.4608ZM151.346 61.4328C163.835 61.4328 173.534 70.3502 173.534 80.8562H177.534C177.534 67.6986 165.574 57.4328 151.346 57.4328V61.4328ZM173.534 80.8562C173.534 91.3623 163.835 100.28 151.346 100.28V104.28C165.574 104.28 177.534 94.0139 177.534 80.8562H173.534ZM151.346 100.28H74.6365V104.28H151.346V100.28ZM76.6365 102.28V102.271H72.6365V102.28H76.6365Z" fill="#CFEBFF" mask="url(#path-2-inside-1_0_4)"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_b_0_4" x="42.3023" y="9.13049" width="137.232" height="97.1492" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_4"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_4" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+            <div class="login-btn">
+                <div class="title">
+                    Jimmi Newtrone
+                </div>
+                <div class="login-button">
+                    <button id="authorize">Login or Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <img src="../static/img/jimmi.png" alt="">
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body{
+    background-color: white;
+}
+*{
+    font-family: 'Saira Stencil One', serif;
+}
+.main-container{
+    width: 100vw;
+    height: 100vh;
+}
+.col{
+}
+img{
+    width: 50vw;
+    height: 100vh;
+}
+.svg-clouds{
+    justify-content: center;
+    display: flex;
+    margin-top: 19rem;
+}
+.title{
+    text-align: center;
+    font-size: 3rem;
+}
+.login-button{
+    margin-top: 4rem;
+    justify-content: center;
+    display: flex;
+}
+.login-button button{
+    border: 0 solid transparent;
+    border-radius: 8px;
+    background-color: #518090;
+    color: white;
+    font-size: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
