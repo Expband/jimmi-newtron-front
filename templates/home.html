@@ -1,20 +1,99 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Auth0 Example</title>
-      <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-      defer>
-      </script>
-      <script src="https://cdn.auth0.com/js/lock/12.4.0/lock.min.js" defer></script>
-      <script src="../static/js/auth-pop-up.js" defer></script>
-  </head>
-  <body>
-    <h1>Welcome !</h1>
-    <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
-    <h1 id="profileDropDown">Welcome Guest</h1>
-    <button id="authorize">Log in</button>
-  </body>
+<head>
+    <meta charset="utf-8"/>
+    <title>JN</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Saira Stencil One' rel='stylesheet'>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+            defer>
+    </script>
+    <script src="https://cdn.auth0.com/js/lock/12.4.0/lock.min.js" defer></script>
+    <script src="../static/js/auth-pop-up.js" defer></script>
+</head>
+<body>
+<div class="main-container" id="app">
+    <div class="modal" id="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" v-on:click="hideModal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input">
+                        <input type="text" placeholder="Name" v-model="new_source.source">
+                        <input type="number" placeholder="Max Capacity" v-model="new_source.capacity">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" v-on:click="createNewSource">Add Source</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarArea" aria-controls="navbarArea" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarArea">
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item my-cab dropdown">
+                        <a class="nav-link nav-user" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-solid fa-circle-user icon"></i><h5 v-text="user.phone_number"></h5></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" v-on:click="logout">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="consumers-chart" v-if="consumers!== undefined">
+                        <div id="consumers-chart-div">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="sources-list">
+                        <div class="title">
+                            <h1>Sources</h1>
+                        </div>
+                        <div class="main-body">
+                            <div v-for="(source,index) in sources" :key="index"><h4  v-text="source.source"></h4><i class="fa-solid fa-xmark" v-on:click="deleteSource(source.id)"></i></div>
+                        </div>
+                        <div class="footer">
+                            <button class="add-source" v-on:click="showModal">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="capacity-status red" v-if="user.is_notified">
+                        <h1 v-text="'Max Capacity:'+user.max_capacity"></h1>
+                    </div>
+                    <div class="capacity-status green" v-if="!user.is_notified">
+                        <h1 v-text="'Max Capacity:'+user.max_capacity"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="../static/js/Config.js" type="module"></script>
+<script src="../static/js/home.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</body>
 </html>

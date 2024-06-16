@@ -18,15 +18,12 @@ templates = Jinja2Templates(directory='templates')
 @app.get('/waiting', response_class=HTMLResponse)
 async def waiting(request: Request):
     return templates.TemplateResponse('waiting.html', context={'request': request})
-
-
-@app.get('/main', response_class=HTMLResponse)
+@app.get('/login', response_class=HTMLResponse)
 async def waiting(request: Request):
-    return templates.TemplateResponse('home.html', context={'request': request})
-
+    return templates.TemplateResponse('login.html', context={'request': request})
 
 @app.get('/', response_class=HTMLResponse)
-async def login(request: Request):
+async def main(request: Request):
     return templates.TemplateResponse('home.html', context={'request': request})
 
 
