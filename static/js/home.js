@@ -43,8 +43,8 @@ let app = new Vue({
         },
         async getUser() {
             let th = this
-            let sub = this.jwt["sub"]
-            let response = await fetch(th.config.BACKEND + "user?sub=" + sub,
+            let suburban = th.jwt["sub"]
+            let response = await fetch(th.config.BACKEND + "user?sub=" + suburban,
                 {
                     method: "GET",
                     headers: {
