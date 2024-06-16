@@ -21,7 +21,7 @@ let app = new Vue({
     methods: {
         async verifyToken() {
             let th = this
-            let response = await fetch(th.config.BACKEND + "/auth/validate",
+            let response = await fetch(th.config.BACKEND + "auth/validate",
                 {
                     method: "GET",
                     headers: {
