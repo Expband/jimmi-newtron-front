@@ -2,9 +2,9 @@ const currentUrl = window.location.href;
 const url = new URL(currentUrl);
 const code = url.searchParams.get("code");
 
-// if (!code) {
-//     window.location.href = "https://jimmi-newtron-front-1129fbebcd87.herokuapp.com/";
-// }
+if (!code) {
+    window.location.href = "https://jimmi-newtron-front-1129fbebcd87.herokuapp.com/";
+}
 
 $(document).ready(function () {
     fetch('https://jimmi-newtron-8bfd33f87c1a.herokuapp.com/auth/authorize_code', {
@@ -23,7 +23,7 @@ $(document).ready(function () {
         .then(data => {
             console.log(data); // Access parsed JSON data here
             localStorage.setItem('access_token', data)
-            // window.location.href="/"
+            window.location.href="/"
         })
         .catch(error => {
             console.error(error);
