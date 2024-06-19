@@ -23,7 +23,7 @@ $(document).ready(function () {
         .then(data => {
             console.log(data); // Access parsed JSON data here
             localStorage.setItem('access_token', data)
-            // window.location.href="/"
+            window.location.href="/"
         })
         .catch(error => {
             console.error(error);
